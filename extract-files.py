@@ -50,6 +50,9 @@ blob_fixups: blob_fixups_user_type = {
         'vendor.qti.hardware.display.config-V2-ndk_platform.so',
         'vendor.qti.hardware.display.config-V2-ndk.so',
     ),
+    'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service': blob_fixup().add_needed(
+    'libstagefright_foundation-v33.so',
+    )
 }
 
 module = ExtractUtilsModule(

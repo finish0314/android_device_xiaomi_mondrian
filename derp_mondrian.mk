@@ -7,14 +7,14 @@
 # Inherit from mondrian device
 $(call inherit-product, device/xiaomi/mondrian/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common derp configuration
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 #Add miuicamera and some other apps
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 -include vendor/xiaomi/addions/packages.mk
 
-PRODUCT_NAME := lineage_mondrian
+PRODUCT_NAME := derp_mondrian
 PRODUCT_DEVICE := mondrian
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -31,14 +31,3 @@ PRODUCT_SYSTEM_DEVICE := mondrian
 BUILD_FINGERPRINT := POCO/mondrian_global/mondrian:14/UKQ1.230804.001/V816.0.10.0.UMNMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingChipset="Snapdragon 8+ Gen1" \
-    RisingMaintainer="Finish(@Finish0314)"
-
-RISING_MAINTAINER="Finish(@Finish0314)"
-TARGET_ENABLE_BLUR := true
-PRODUCT_NO_CAMERA := false
-TARGET_DEFAULT_PIXEL_LAUNCHER := false 
-WITH_GMS := true
